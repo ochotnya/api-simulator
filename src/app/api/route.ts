@@ -23,7 +23,7 @@ export async function GET(request: NextRequest) {
       await sleep(delay)
     }
 
-    return NextResponse.json({ delay }, { status })
+    return new Response(null, { status })
   } catch (error) {
     return NextResponse.json({ message: 'request failed' }, { status: 500 })
   }
